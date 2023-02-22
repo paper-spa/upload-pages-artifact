@@ -16,6 +16,7 @@ runs:
       shell: bash
       run: |
         tar \
+          --mode=+rX \
           --dereference --hard-dereference \
           --directory ${{ inputs.path }} \
           -cvf ${{ runner.temp }}/artifact.tar \
